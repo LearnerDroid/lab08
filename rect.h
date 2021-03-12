@@ -38,7 +38,7 @@ class Rect : public shape {
 
 	void validate() override {
 		try {
-			if (upperL.x() < 0 || upperL.y() < 0) {
+			if (upperL.x() <= 0 || upperL.y() <= 0) {
 				this->setColor(color(0, 0, 0));
 				throw "rect vert less zero";
 			}

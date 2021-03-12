@@ -38,8 +38,7 @@ class Polygon : public shape {
 		catch (const char* e) {
 			std::cout << e << std::endl;
 		}
-		//Test Failed : 'polygon concave\npolygon concave\nellipse divide zero\nrect order incorrect\npolygon vert less zero\nellipse center less zero\nrect vert less zero\nrect order incorrect\nellipse center less zero\nellipse divide zero\npolygon vert less zero\npolygon concave\nwriting an image of size: 300 300 to: out\n'
-		//	          'polygon concave\npolygon concave\n                     rect order incorrect\npolygon vert less zero\nellipse center less zero\n                     rect order incorrect\nellipse center less zero\n                     polygon vert less zero\n                 writing an image of size: 300 300 to: out\n
+	    
 	}
   private:
 	std::vector<vec2> theVerts;
