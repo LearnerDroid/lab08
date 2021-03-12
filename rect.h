@@ -38,10 +38,15 @@ class Rect : public shape {
 
 	void validate() override {
 		try {
-			if (upperL.x() <= 0 || upperL.y() <= 0) {
+			if (upperL.x() < 0 || upperL.y() < 0) {
 				this->setColor(color(0, 0, 0));
 				throw "rect vert less zero";
 			}
+		}
+		catch (const char* e) {
+			std::cout << e << std::endl;
+		}
+		try {
 			if (upperL.x() > lowerR.x() || upperL.y() > lowerR.y()) {
 				int temp[4]; //correct upperL.x, upperL.y, lowerL.x, and lowerL.y.
 				if (upperL.x() > lowerR.x()) {

@@ -30,13 +30,18 @@ class Implicit2D : public shape {
 				this->setColor(color(0, 0, 0));
 				throw "ellipse center less zero";
 			}
+		}
+		catch(const char* e){
+			std::cout << e << std::endl;
+		}
+		try {
 			if (radii.x() == 0 || radii.y() == 0) {
 				radii = vec2(2, 0);
 				this->setColor(color(255, 0, 0));
 				throw "ellipse divide zero";
 			}
 		}
-		catch(const char* e){
+		catch (const char* e) {
 			std::cout << e << std::endl;
 		}
 	}

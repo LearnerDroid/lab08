@@ -25,9 +25,14 @@ class Polygon : public shape {
 					throw "polygon vert less zero";
 				}
 			}
+		}
+		catch (const char* e) {
+			std::cout << e << std::endl;
+		}
+		try {
 			if (concave()) {
 				vec2 temp = theVerts.back();
-				while(theVerts.size() > 2) {
+				while (theVerts.size() > 2) {
 					theVerts.pop_back();
 				}
 				theVerts.push_back(temp);
@@ -38,7 +43,6 @@ class Polygon : public shape {
 		catch (const char* e) {
 			std::cout << e << std::endl;
 		}
-	    
 	}
   private:
 	std::vector<vec2> theVerts;
