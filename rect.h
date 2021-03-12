@@ -68,7 +68,7 @@ class Rect : public shape {
 				throw "rect order incorrect";
 			}
 		}
-		catch (std::string e) {
+		catch (const char* e) {
 			std::cout << e << std::endl;
 		}
 	}

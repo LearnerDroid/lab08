@@ -26,15 +26,16 @@ class Polygon : public shape {
 				}
 			}
 			if (concave()) {
-				std::vector<vec2> temp;
-				temp.push_back(theVerts.at(0));
-				temp.push_back(theVerts.at(1));
-				temp.push_back(theVerts.at(theVerts.size()));
+				vec2 temp = theVerts.back();
+				while(theVerts.size() > 2) {
+					theVerts.pop_back();
+				}
+				theVerts.push_back(temp);
 				this->setColor(color(255, 0, 0));
 				throw "polygon concave";
 			}
 		}
-		catch (std::string e) {
+		catch (const char* e) {
 			std::cout << e << std::endl;
 		}
 	}

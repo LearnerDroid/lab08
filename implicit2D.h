@@ -36,7 +36,7 @@ class Implicit2D : public shape {
 				throw "ellipse divide zero";
 			}
 		}
-		catch(std::string e){
+		catch(const char* e){
 			std::cout << e << std::endl;
 		}
 	}

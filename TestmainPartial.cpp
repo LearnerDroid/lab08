@@ -25,9 +25,9 @@ using namespace std;
 
 
 /*read command line arguments and write output - covers all tests for lab08*/
-int main(int argc, const char *argv[]) {
+int main(int argc, char *argv[]) {
 	//string is counted as a const char*
-	argv[0] = "./a.out"; argv[1] = "200"; argv[2] = "200"; argv[3] = "out";
+	//argv[0] = "./a.out"; argv[1] = "200"; argv[2] = "200"; argv[3] = "out";
 
 	ofstream outFile0, outFile1, outFile2, outFile3;
 	int sizeX, sizeY;
